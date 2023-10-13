@@ -10,6 +10,7 @@ static inline uint32_t zns_zone_idx(NvmeNamespace *ns, uint64_t slba)
 
 	// 檢查n->zone_size_log2是否大於0
 	// if yes slba右移n->zone_size_log2位, if no slba除以n->zone_size
+	
     return (n->zone_size_log2 > 0 ? slba >> n->zone_size_log2 : slba / n->zone_size); 
 }
 
